@@ -1,0 +1,49 @@
+Here's a more refined and detailed version of your document:
+
+# Abstract
+
+Multimodal learning often faces the optimization dilemma caused by the modality imbalance phenomenon, leading to unsatisfactory performance in real-world applications. A core reason for modality imbalance is that models of each modality converge at different rates. Many approaches naturally focus on adaptively adjusting learning procedures. Essentially, the varying convergence rates are due to the inconsistent difficulty of fitting category labels for each modality during learning. From the perspective of fitting labels, we find that appropriate positive intervention in label fitting can correct these differences in learning ability. By leveraging the power of contrastive learning to intervene in the learning of category label fitting, we propose a novel multimodal learning approach that dynamically integrates unsupervised contrastive learning and supervised multimodal learning to address the modality imbalance problem. Our heuristic integration strategy significantly alleviates the modality imbalance phenomenon. Moreover, we design a learning-based integration strategy to dynamically integrate the two losses, further improving performance. Experiments on widely used datasets demonstrate the superiority of our method compared with state-of-the-art (SOTA) multimodal learning approaches. The code is available at [Dynamic Modality Gap Learning](https://anonymous.4open.science/r/Dynamic_Modality_Gap_Learning).
+
+# Environment Setup
+
+To set up the environment for this project, ensure you have the following dependencies:
+
+- Pytorch
+- torchvision
+- sentencepiece
+- PyYAML
+- and other required libraries
+
+You can install these dependencies using pip:
+
+```bash
+pip install torch torchvision sentencepiece pyyaml
+```
+
+# Datasets
+
+Prepare the following datasets and place them in the specified folder:
+
+- Twitter15
+- CREMA-D
+- Kinetics-Sounds
+- Sarcasm
+- NVGesture
+
+Additionally, download the pretrained models for ResNet50 and BERT and place them in the same folder.
+
+# Usage
+
+To train the model using this method, run:
+
+```bash
+python main.py
+```
+
+To perform inference with the trained model, run:
+
+```bash
+python inference.py
+```
+
+Ensure that your datasets and pretrained models are correctly placed in the designated folders before running the scripts.
